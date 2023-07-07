@@ -1,0 +1,112 @@
+@use '../base/variables' as var;
+
+// Event page Navigation
+
+#eventMenu {
+	display: inline-block;
+	width: 100%; 
+	background: var.$secondary-color;
+	margin-top: -5px;
+
+    .topLevel {
+        position:relative;
+        padding:0px 0px 0px 0px;
+        margin:0px 0px 0px 0px;
+
+        li {
+            float:left;
+            margin:0;
+            list-style-type:none;
+            position:relative;
+
+            div a {
+                display:block;
+                color:#ffffff;
+                font-size:22px;
+                line-height: 22px;
+                font-weight:700;
+                text-decoration:none;
+                padding: 16px 25px;
+                box-sizing: border-box;
+
+                &:after {
+                    content: "\f178";
+                    color: var.$primary-color;
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    margin-left: 10px;
+                }
+
+                &:hover:after {
+                    margin-left: 20px;
+                }
+            }
+
+            div:hover {
+                background: var.$secondary-color;
+            }
+
+            &:hover a, a:hover{
+                color:#fff;
+                text-decoration:none;
+                font-weight:700;
+            }
+
+            a div {
+                display:block;
+                background:none;
+                margin:0 0px 0 0;
+                padding:0px 0px 0px 0px;
+            }
+
+            a:hover div{
+                background:none;
+                }
+
+        }
+
+    }
+
+}
+
+// Event page Layout & Styles
+
+
+//Event mobile menu styles
+
+#eventmenu_mobile {
+    margin-top: -4px;
+
+    .slicknav_menu {
+        background: var.$secondary-color;
+        position: relative;
+        padding: 10px 0px 10px !important;
+        z-index: 10;
+
+        .slicknav_btn {
+            background: var.$secondary-color;
+
+            .slicknav_menutxt {
+                color: #fff;
+            }
+
+            .slicknav_icon-bar {
+                background-color: #fff;
+            }
+        }
+
+        .slicknav_nav > li.slicknav_parent > a {
+            display: none;
+        }
+
+        .slicknav_nav a {
+            border-bottom: 1px solid #fff;
+        }
+    }
+} 
+
+@media only screen and (max-width: 768px) {
+    #eventMenu {
+        display: none;
+    }
+}

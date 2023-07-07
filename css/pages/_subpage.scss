@@ -1,0 +1,119 @@
+@use '../base/variables' as var;
+
+// Subpage Layout & Styles
+#main_content {
+    margin-top: 30px;
+
+    .columns > h2, .columns > h3, .columns > h4, .columns > h5 {
+        margin-top: 0;
+    }
+
+    h2 + h3 {
+        margin-top: -15px;
+    }
+
+    h3 + h4 {
+        margin-top: -5px;
+    }
+
+    h4 + h5 {
+        margin-top: -10px !important;
+    }
+
+    p {
+        line-height: 22px;
+    }
+
+    ul li::marker {
+        color: var.$color_option4;
+        font-weight: 700;;
+    }
+    
+    li {
+        padding-left: 0px; 
+        margin-bottom: 5px;
+    }
+
+    .margin-top-0 {
+        margin-top: 0px;
+    }
+
+    .margin-bottom-0 {
+        margin-bottom: 0px;
+    }
+
+    .margin-top-50 {
+        margin-top: 50px;
+    }
+
+    .margin-bottom-50 {
+        margin-bottom: 50px;
+    }
+}
+
+#page_title {
+    width: 100%;
+    text-align: center;
+    background: url(../images/page_title_bg.png) no-repeat top center;
+    background-size: cover;
+    min-height: 200px;
+    padding-top: 28px;
+
+    .page_title {
+        margin-top: 31px;
+    }
+}
+
+h6 span, .breadcrumbs > span, .breadcrumbs > div > span {
+    padding-bottom: 11px;
+    border-bottom: 1px solid #B2B2B2;      
+}
+
+h6, .breadcrumbs a, .breadcrumbs a span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: var.$body_color;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.breadcrumbs span > span {
+	display: none;
+}
+
+.breadcrumbs span > span:nth-of-type(1), 
+.breadcrumbs span > span:nth-of-type(2), 
+.breadcrumbs span > span:nth-of-type(3) {
+	display: inline-block;
+}
+
+.breadcrumbs .level1 span > span:nth-of-type(2),
+.breadcrumbs .level1 span > span:nth-of-type(3) {
+    display: none;
+}
+
+// #dnn_dnnBreadcrumb_lblBreadCrumb span > span.bc_sep:nth-of-type(n+3) {
+// 	display: none;
+// }
+
+.sep {
+    margin: 0px 10px;
+}
+
+.callout {
+    padding: 40px;
+    margin: 50px 0px;
+    text-align: center;
+    background: #d8e5ed;
+    font-family: var.$secondary-font;
+    font-size: 24px;
+    line-height: 36px;
+    font-style: italic;
+    font-weight: 700;
+    color: var.$secondary-color;
+}

@@ -1,0 +1,152 @@
+// Global Variables
+
+// Site Variables
+
+$primary_color: #408740 ;
+$secondary_color: #005586;
+$tertiary_color: #BF6C29;
+$body_color: #54565B; 
+
+$color_option4: #6D2A5B;
+$color_option5: $body_color;
+$color_option6: #B2B2B2;
+
+
+$container_width: 1280px;
+
+$base_font_size: 1.6rem;
+$primary_font: 'Montserrat', sans-serif;
+$secondary_font: 'Merriweather', serif;
+$body_line_spacing: 1.375rem;
+$body_weight: 400;
+$body_bg_color: #ffffff;
+
+
+// Heading Variables
+
+$heading_weight: 700;
+$heading_font: $secondary_font;
+
+$h1_font: $heading_font;
+$h1_font_size:40px;
+$h1_weight: $heading_weight;
+$h1_color: $color_option4;
+$h1_line_spacing: 1.2;
+$h1_letter_spacing: 0;
+$h1_bottom_margin: 0;
+$h1_top_margin: 0;
+
+$h2_font: $primary_font;
+$h2_font_size:24px;
+$h2_weight: 600;
+$h2_color: $secondary_color;
+$h2_line_spacing: 1.25;
+$h2_letter_spacing: 0;
+$h2_bottom_margin: 25px;
+$h2_top_margin: 30px;
+
+$h3_font: $heading_font;
+$h3_font_size: 18px;
+$h3_weight: $heading_weight;
+$h3_color: $tertiary_color;
+$h3_line_spacing: 1.5;
+$h3_letter_spacing:0;
+$h3_bottom_margin: 15px;
+$h3_top_margin: 30px;
+
+$h4_font: $primary_font;
+$h4_font_size: 18px;
+$h4_weight: 600;
+$h4_color: $primary_color;
+$h4_line_spacing: 1.25;
+$h4_letter_spacing: 0;
+$h4_bottom_margin: 15px;
+$h4_top_margin: 30px;
+
+$h5_font: $primary_font;
+$h5_font_size: 16px;
+$h5_weight: 500;
+$h5_color: $secondary_color;
+$h5_line_spacing: 1.25;
+$h5_letter_spacing: 0;
+$h5_bottom_margin: 10px;
+$h5_top_margin: 30px;
+
+//Link Variables
+
+$link_color: $primary_color;
+$link_weight: 600;
+$link_style: underline;
+
+$link_hover_color: $primary_color;
+$link_hover_weight: 600;
+$link_hover_style: none;
+
+// Button Variables
+
+$button_color: #ffffff;
+$button_padding: 13px 63px;
+$button_font: $primary_font;
+$button_font_size: 14px;
+$button_font_weight: 600;
+$button_bg_color: $primary_color;
+$button_border_color: $primary_color;
+$button_border_radius: 0;
+
+$button_hover_color: $primary_color;
+$button_hover_font_weight: $button_font_weight;
+$button_hover_bg_color: #ffffff;
+$button_hover_border_color: $primary_color;
+
+// Primary Button Variables
+
+$button_primary_color: #ffffff;
+$button_primary_font_weight: $button_font_weight;
+$button_primary_bg_color: $secondary_color;
+$button_primary_border_color: $secondary_color;
+
+$button_primary_hover_color: $primary_color;
+$button_primary_hover_font_weight: $button_font_weight;
+$button_primary_hover_bg_color: #ffffff;
+$button_primary_hover_border_color: $primary_color;
+
+// Secondary Button Variables
+
+$button_secondary_color: $primary_color;
+$button_secondary_font_weight: 700;
+$button_secondary_bg_color: #ffffff;
+$button_secondary_border_color: #ffffff;
+
+$button_secondary_hover_color: $primary_color;
+$button_secondary_hover_font_weight: 700;
+$button_secondary_hover_bg_color: #ffffff;
+$button_secondary_hover_border_color: #ffffff;
+
+// Navigation Variables
+
+$nav_bg_color: #ffffff;
+$nav_item_space_between: 49px;
+$nav_alignment: center;
+
+$nav_item_font: $primary_font;
+$nav_item_color: $body_color;
+$nav_item_font_weight: 400;
+$nav_item_font_size: 14px;
+$nav_item_padding: 0 0 28px 0;
+$nav_item_bg_color: transparent;
+
+$nav_item_hover_color: $primary_color;
+$nav_item_hover_bg_color: transparent;
+
+$subnav_bg_color: #EBEBEB;
+
+$subnav_item_font: $primary_font;
+$subnav_item_color: $body_color;
+$subnav_item_font_weight: 600;
+$subnav_item_font_size: 18px;
+$subnav_item_padding: 10px;
+$subnav_item_bg_color: transparent;
+
+$subnav_item_hover_color: #ffffff;
+$subnav_item_hover_bg_color: transparent;
+$subnav_item_hover_font_weight: 700;

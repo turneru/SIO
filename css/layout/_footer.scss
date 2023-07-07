@@ -1,0 +1,101 @@
+//Footer Layout & Styles
+@use '../base/variables' as var;
+
+footer {
+  margin-top: -100px;
+}
+
+#footer_top {
+  width: 100%;
+  background: url('../images/footer_bg_top.png') no-repeat top center;
+  background-size: cover;
+  min-height: 336px;
+}
+
+#footer {
+  width: 100%;
+  background: var.$secondary_color;
+  color: #fff;
+  line-height: 20px;
+}
+
+.social, .copyright, .logo {
+  text-align: center;
+}
+
+.social {
+  margin-top: 51px;
+  margin-bottom: 57px;
+}
+
+.copyright {
+  font-size: 13px;
+}
+
+a.social_media, a.social_media:link, a.social_media:visited, a.social_media:active {
+	color: #fff;
+  background: var.$primary_color;
+  font-weight: normal;
+  text-decoration: none !important;
+  border-radius: 50%;
+  border: var.$primary_color solid 1px;
+  margin-right: 20px;
+  width: 30px;
+  text-align: center;
+  line-height: 15px;
+  height: 30px;
+  display: inline-block;
+  font-size: 16px;
+
+  &:hover {
+    font-weight: normal;
+    text-decoration: none;
+    background: #fff;
+    border: var.$primary_color solid 1px;
+    color: var.$primary_color;
+  }
+
+  & i {
+    line-height: 30px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.footer_link, a.footer_link:link, a.footer_link:hover, a.footer_link:visited {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700 !important;
+
+  &:after {
+		content: "\f178";
+    color: var.$primary_color;
+		font-family: "Font Awesome 6 Free";
+		font-weight: 900;
+    transition: 0.4s ease;
+		margin-left: 10px;
+	}
+
+	&:hover:after {
+		margin-left: 20px;
+	}
+
+}
+
+.footer_email, a.footer_email:link, a.footer_email:visited {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 400 !important;
+}
+
+a.footer_email:hover {
+  text-decoration: underline;
+}
+
+.hidden_link, a.hidden_link:link, a.hidden_link:hover, a.hidden_link:visited {
+  color: var.$secondary_color !important;
+}

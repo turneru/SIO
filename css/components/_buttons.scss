@@ -1,0 +1,83 @@
+@use '../base/variables' as var;
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+.btn,
+button {
+	display: inline-block;
+	padding: var.$button_padding;
+	color: var.$button_color !important;
+	text-align: center;
+	font-size: var.$button_font_size;
+	font-weight: var.$button_font_weight;
+	font-family: var.$primary_font;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	white-space: nowrap;
+	background-color: var.$button_bg_color;
+	border-radius: var.$button_border_radius;
+	border: 1px solid var.$button_border_color;
+	cursor: pointer;
+	box-sizing: border-box; 
+	margin-top: 40px;
+	margin-bottom: 60px;
+
+	&:hover {
+		color: var.$button_hover_color !important;
+		font-weight: var.$button_hover_font_weight !important;
+		border-color: var.$button_hover_border_color;
+		background-color: var.$button_hover_bg_color;
+		text-decoration: none !important;
+		outline: 0;
+	}
+
+	// Primary Button
+
+	&-primary {
+		color: var.$button_primary_color !important;
+		font-weight: var.$button_primary_font_weight !important;
+		background-color: var.$button_primary_bg_color !important;
+		border-color: var.$button_primary_border_color; 
+	}
+
+	&-primary:hover {
+		color: var.$button_primary_hover_color !important;
+		font-weight: var.$button_primary_hover_font_weight !important;
+		background-color: var.$button_primary_hover_bg_color !important;
+		border-color: var.$button_primary_hover_border_color; 
+	}
+
+	// Secondary Button
+
+	&-secondary {
+		color: var.$button_secondary_color !important;
+		font-weight: var.$button_secondary_font_weight !important;
+		background-color: var.$button_secondary_bg_color !important;
+		border-color: var.$button_secondary_border_color;
+		text-decoration: none !important;
+		margin-top: 15px;
+		margin-bottom: 30px;
+		display: inline-block;
+	}
+
+	&-secondary:hover {
+		color: var.$button_secondary_hover_color !important;
+		font-weight: var.$button_secondary_hover_font_weight !important;
+		background-color: var.$button_secondary_hover_bg_color !important;
+		border-color: var.$button_secondary_hover_border_color; 
+		text-decoration: none !important;
+	}
+
+	&-secondary:after {
+		content: "\f178";
+		font-family: "Font Awesome 6 Free";
+		font-weight: 900;
+		transition: 0.4s ease;
+		margin-left: 10px;
+	}
+
+	&-secondary:hover:after {
+		margin-left: 20px;
+	}
+}
