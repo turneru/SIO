@@ -3,7 +3,7 @@
 // Event page Navigation
 
 #eventMenu {
-	display: inline-block;
+	// display: inline-block;
 	width: 100%; 
 	background: var.$secondary-color;
 	margin-top: -5px;
@@ -12,9 +12,12 @@
         position:relative;
         padding:0px 0px 0px 0px;
         margin:0px 0px 0px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
 
         li {
-            float:left;
+            // float:left;
             margin:0;
             list-style-type:none;
             position:relative;
@@ -43,7 +46,7 @@
             }
 
             div:hover {
-                background: var.$secondary-color;
+                background: transparent;
             }
 
             &:hover a, a:hover{
@@ -70,6 +73,70 @@
 }
 
 // Event page Layout & Styles
+.event_icon_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px 0px 20px;
+
+    .event_button {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+    
+        .event_icon {
+            display: flex;
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #B2B2B2;
+            background: #fff;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all .5s ease;
+
+            img {
+                transition: all .25s ease;
+            }
+        }
+    
+        .event_text {
+            color: var.$primary_color;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            height: 44px;
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .event_icon {
+                background: var.$secondary_color;
+                border: 3px solid var.$secondary_color;
+
+                img {
+                    filter: brightness(0) invert(1)
+                }
+            }
+        }
+    }
+}
 
 
 //Event mobile menu styles

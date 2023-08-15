@@ -32,7 +32,28 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <dnn:DnnJsInclude runat="server" FilePath="js/jquery.slicknav.js" PathNameAlias="SkinPath" />
-
+<script type="text/javascript">
+	var protocol = document.location.protocol == "https:" ? "https" : "http";
+	var z = document.createElement("script");
+	z.type = "text/javascript";
+	z.src = protocol + "://s.zkcdn.net/ados.js";
+	z.async = true;
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(z,s);
+</script>
+<script type="text/javascript">
+	var ados = ados || {};
+	ados.run = ados.run || [];
+	ados.run.push(function() {
+		/* load placement for account: Multiview, site: SIOweb - Society of Interventional Oncology - MultiWeb, size: 728x90 - Leaderboard, zone: sioweb - Leaderboard (728x90 interior pages) */
+		ados_add_placement(4466, 713482, "mvleaderboard", 4).setZone(167857);
+		ados_setDomain('engine.multiview.com');
+		/* load placement for account: Multiview, site: SIOweb - Society of Interventional Oncology - MultiWeb, size: 728x90 - Leaderboard, zone: sioweb - Leaderboard bottom(728x90 interior pages) */
+		ados_add_placement(4466, 713482, "mvleaderboard2", 4).setZone(173679);
+		ados_setDomain('engine.multiview.com');
+		ados_load();
+	});
+  </script>
 <!-- CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	

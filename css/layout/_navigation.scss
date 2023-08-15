@@ -26,41 +26,48 @@
 	position:relative;
 	padding:0px 0px 0px 0px;
 	margin:0px 0px 0px 0px;
-}
 
-#dnnMenu .topLevel li {
-	float:left;
-	margin:0;
-	list-style-type:none;
-	position:relative;
-	margin-right: var.$nav_item_space_between;
-	margin-top: 0px;
-}
+	li {
+		float:left;
+		margin:0;
+		list-style-type:none;
+		position:relative;
+		margin-right: var.$nav_item_space_between;
+		margin-top: 0px;
 
-#dnnMenu .topLevel li:last-of-type {
-	margin-right: 0px;
-}
+		&:last-of-type {
+			margin-right: 0px;
+		}
 
-#dnnMenu .topLevel li a {
-	display:block;
-	color: var.$nav_item_color;
-	font-size: var.$nav_item_font_size;
-	font-weight: var.$nav_item_font_weight;
-	text-decoration:none;
-	text-align: center;
-	letter-spacing: .05em;
-	padding: var.$nav_item_padding;
-	box-sizing: border-box;
-	text-transform: uppercase;
-    border-bottom: 3px solid #fff;
-}
+		a {
+			display:block;
+			color: var.$nav_item_color;
+			font-size: var.$nav_item_font_size;
+			font-weight: var.$nav_item_font_weight;
+			text-decoration:none;
+			text-align: center;
+			letter-spacing: .05em;
+			padding: var.$nav_item_padding;
+			box-sizing: border-box;
+			text-transform: uppercase;
+			border-bottom: 3px solid #fff;
+		}
 
-#dnnMenu .topLevel li:hover a, #dnnMenu .topLevel li a:hover {
-	color: var.$nav_item_hover_color;
-	background: var.$nav_item_hover_bg_color;
-	text-decoration:none;
-	font-weight: 600;
-	border-bottom: 3px solid var.$primary_color;
+		&:hover a, a:hover {
+			color: var.$nav_item_hover_color;
+			background: var.$nav_item_hover_bg_color;
+			text-decoration:none;
+			font-weight: 600;
+			border-bottom: 3px solid var.$primary_color;
+		}
+
+		&:hover .subLevel{
+			// display:block;
+			// white-space:nowrap;
+			visibility: visible;
+			  opacity: 1;
+		}
+	}
 }
 
 #dnnMenu .subLevel {
@@ -76,124 +83,133 @@
 	z-index:5000;
 	background-color: var.$subnav_bg_color;
 	height: 325px;
-}
-	
-#dnnMenu .topLevel li:hover .subLevel{
-	// display:block;
-	// white-space:nowrap;
-	visibility: visible;
-  	opacity: 1;
-}
-	
-#dnnMenu .subLevel ul{
-	margin:0;
-	padding:0;
-	position:relative;
-	z-index:1200;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-content: flex-start;
-	height: 275px;
-}
-	
-#dnnMenu .subLevel li{
-	float: left;
-    border-top: 0px;
-    width: 33.33%;
-    padding: 0px 23px 0px 0px;
-    border-bottom: none;
-    min-width: auto !important;
-    margin-right: 0;
-    min-height: 50px;
-    margin-bottom: 20px;
-}
 
-#dnnMenu .subLevel li a {
-	display:block;
-	color: var.$subnav_item_color !important;
-	padding: var.$subnav_item_padding; 
-	text-align: left;
-	border: none !important;
-	font-size: var.$subnav_item_font_size;
-	font-weight: var.$subnav_item_font_weight;
-	text-transform: none;
-}
+	&.sublevel_60 {
+		height: 350px;
 
-#dnnMenu .subLevel li a:hover {
-	color: var.$subnav_item_hover_color;
-	background-color: var.$subnav_item_hover_bg_color;
-	border: none;
-	font-weight: 700;
-}
+		ul {
+			height: 295px;
 
-#dnnMenu .subLevel li a:hover:after {
-	content: "\f178";
-	font-family: "Font Awesome 6 Free";
-	font-weight: 900;
-	margin-left: 10px;
-	color: var.$primary_color;
+			li {
+				width: 25%;
+
+				.subLevelRight ul {
+					height: 100% !important;
+				}
+			}	
+		}
+	} 
+
+	ul{
+		margin:0;
+		padding:0;
+		position:relative;
+		z-index:1200;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-content: flex-start;
+		height: 275px;
+
+		li{
+			float: left;
+			border-top: 0px;
+			width: 33.33%;
+			padding: 0px 23px 0px 0px;
+			border-bottom: none;
+			min-width: auto !important;
+			margin-right: 0;
+			min-height: 50px;
+			margin-bottom: 20px;
+
+			a {
+				display:block;
+				color: var.$subnav_item_color !important;
+				padding: var.$subnav_item_padding; 
+				text-align: left;
+				border: none !important;
+				font-size: var.$subnav_item_font_size;
+				font-weight: var.$subnav_item_font_weight;
+				text-transform: none;
+
+				&:hover {
+					color: var.$subnav_item_hover_color;
+					background-color: var.$subnav_item_hover_bg_color;
+					border: none;
+					font-weight: 700;
+
+					&:after {
+						content: "\f178";
+						font-family: "Font Awesome 6 Free";
+						font-weight: 900;
+						margin-left: 10px;
+						color: var.$primary_color;
+					}
+				}
+			}
+		}
+	}
 }
 
 #dnnMenu .subLevelRight{
 	display:block;
 	width:100%;
 	margin:0 0 0 0px;
-}
 
-#dnnMenu .subLevelRight.subLevelRight101 {
-    display: none;
-}
+	&.subLevelRight101 {
+		display: none;
+	}
 
-#dnnMenu .subLevelRight ul{
-	display:block;
-	height: 100%;
-}
+	ul{
+		display:block;
+		height: 100%;
 
-#dnnMenu .subLevelRight ul li:first-of-type {
-	margin-left: 0;
-}
+		li, li:hover {
+			position:relative;
+			float: left;
+			width: 100% !important;
+			padding: 0;
+			min-height: auto;
+			margin-bottom: 0;
 
-#dnnMenu .subLevelRight ul li, #dnnMenu .subLevelRight ul li:hover {
-	position:relative;
-	float: left;
-	width: 100%;
-	padding: 0;
-	min-height: auto;
-	margin-bottom: 0;
-}
+			&:first-of-type {
+				margin-left: 0;
+			}
 
-#dnnMenu .subLevelRight ul li a, #dnnMenu .subLevelRight ul li a div {
-	display:block;
-	text-transform: none !important;
-    font-weight: 500 !important;
-}
+			a, a div {
+				display:block;
+				text-transform: none !important;
+				font-weight: 500 !important;
 
-#dnnMenu .subLevelRight ul li a:hover, #dnnMenu .subLevelRight ul li a:hover div {
-	display:block;
-	font-weight: 600 !important;
+				&:hover, &:hover div {
+					display:block;
+					font-weight: 600 !important;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: 1200px) {
-	#dnnMenu .topLevel li {
+	#dnnMenu .topLevel ul li {
 		margin-right: 30px;
 	}
 }
 
 @media only screen and (max-width: 1050px) {
-	#dnnMenu .topLevel li {
+	#dnnMenu .topLevel ul li {
 		margin-right: 15px;
 	}
 }
 
 @media only screen and (max-width: 991px) {
-	#dnnMenu .topLevel li {
+	#dnnMenu .topLevel ul li {
 		margin-right: 30px;
 	}
 }
 
 @media only screen and (max-width: 900px) {
-	#dnnMenu .topLevel li {
+	#dnnMenu .topLevel ul li {
 		margin-right: 15px;
 	}
 }

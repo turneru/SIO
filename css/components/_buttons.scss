@@ -32,6 +32,13 @@ button {
 		outline: 0;
 	}
 
+	// Smaller Margins Button
+
+	&.small {
+		margin-top: 20px;
+		margin-bottom: 40px; 
+	}
+
 	// Primary Button
 
 	&-primary {

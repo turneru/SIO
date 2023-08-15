@@ -48,27 +48,26 @@
     box-sizing: content-box;
   
     .ticker {
-      display: inline-block;
-      height: 50px;
-      line-height: 50px;  
-      white-space: nowrap;
-      padding-right: 100%;
-      box-sizing: content-box;
-      -webkit-animation-iteration-count: infinite; 
-              animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-              animation-timing-function: linear;
-     -webkit-animation-name: ticker;
-             animation-name: ticker;
-      -webkit-animation-duration: 60s;
-              animation-duration: 60s;
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;  
+        white-space: nowrap;
+        padding-right: 100%;
+        box-sizing: content-box;
+        -webkit-animation-iteration-count: infinite; 
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-name: ticker;
+        animation-name: ticker;
+        -webkit-animation-duration: 60s;
+        animation-duration: 60s;
 
       &:hover {
         animation-play-state: paused
       }
 
       &_item {
-  
         display: inline-block;
         padding: 0 2rem;
         color: #fff;
@@ -88,9 +87,7 @@
       &_item a.button-secondary:after {
         color: #fff;
       }
-  
     }
-  
   }
 
 #home_top {
@@ -422,7 +419,6 @@
 }
 
 body.dnnEditState {
-
     #education .col-md-3 img {
         margin-top: 0;
     }
@@ -449,3 +445,36 @@ body.dnnEditState {
         margin-bottom: 0;
     }
 }
+ 
+.popup {
+    display:none;
+}
+
+.fancybox-stage {
+    display: block !important;
+
+    .fancybox-content {
+        margin: 0 !important;
+    }
+
+    .popup {
+        text-align: center;
+        max-width: 660px;
+        background: #fff;
+        padding: 25px 25px 15px; 
+        cursor: inherit !important;
+
+        .fancybox-button.fancybox-close-small {
+            opacity: 1;
+            color: #408740 !important;
+
+            &:hover {
+                color: #fff !important;
+                background-color:#408740;
+            }
+        }
+    }
+}
+    
+
+

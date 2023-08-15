@@ -11,6 +11,11 @@
 					<div id="TopPane" runat="Server"></div>
 				</div>
 			</div>
+			<div class="row no-margin">
+				<div class="twelve columns">
+					<div id="EventButtonPane" runat="Server"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="main_content">
@@ -24,5 +29,13 @@
 	</div>	
 </div>
 </main>
+
+<script>
+	$(".event_button").click(function(){
+		window.location = $(this).attr("data-href");
+		return false;
+	});   
+</script>
+
 <!--- Footer Include--->
 <!--#include file="includes/footer.ascx"-->

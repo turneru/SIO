@@ -159,7 +159,28 @@ $(".search_panel").mouseleave(
 	function() {
 		$(".search_panel").removeClass("show_search");
 	}
-);	
+);
+
+//Accordion js	
+$(document).ready(function(){   
+  $("div.toggler").click(function() {
+    if ($('.toggle_info').is(':visible')) {
+      $(".toggle_info").slideUp(300);
+			$("h3 i").removeClass('minus-sign').addClass('plus-sign');
+			$(".col-md-12").removeClass("open");
+    }
+    if ($(this).next(".toggle_info").is(':visible')) {
+      $(this).next(".toggle_info").slideUp(300);
+			$(this).prev(".col-md-12").removeClass("open");
+			$("h3 i").removeClass('minus-sign').addClass('plus-sign');
+    } 
+    else {
+      $(this).next(".toggle_info").slideDown(300);
+			$(this).find("h3 i").addClass('minus-sign');
+			$(this).parent(".col-md-12").addClass("open");
+    }
+  });
+});	
 	
 $("#dnnMenu .topLevel li a").hover(
 	function() {

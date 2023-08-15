@@ -10,7 +10,7 @@
 				<div class="outer_video">
 					<div class="video_container">
 						<video class="fullscreen-bg__video video-ready" poster="/Portals/_default/Skins/SiteSkin/images/poster.png" loop="" muted="" playsinline="" autoplay="true" autpreload="metadata" aria-hidden="true">
-						<source data-src="" type="video/mp4" src="/Portals/_default/Skins/SiteSkin/SIO Website Header.mp4">
+						<source data-src="" type="video/mp4" src="/Portals/_default/Skins/SiteSkin/SIO Home Video.mp4">
 						Your browser does not support the video tag.
 						</video>                
 					</div>
@@ -83,6 +83,56 @@
 
 </div>
 </main>
+
+
+<!-- Popup with 30 day cookie - Only shown to logged out users -->
+<% If Request.IsAuthenticated Then%>
+<% Else%>
+	<div class="popup center">
+		<img src="/Portals/_default/skins/siteskin/images/SIO_Logo.svg" alt="SIO Logo" class="img-responsive" width="250">
+		<h2 style="margin-bottom: 20px;">WELCOME TO THE NEW SIO WEBSITE!</h2>
+		
+		<p style="line-height: 24px;"><strong>With the launch of the new SIO website, everyone must first sign up to connect to the new portal. If you were a previous portal user - even if you were not an SIO member - your old credentials will no longer work. Click the button below to complete your sign up.</strong></p>
+		
+		<p><a class="button" href="https://portal.sio-central.org/" onclick="loginLinkClick()" style="margin-bottom: 0;margin-top:15px;">Activate my account</a></p>
+	</div>
+	<script>
+		function loginLinkClick() {
+			$(".fancybox-container").hide();
+			window.open("https://portal.sio-central.org/","_self");
+		}
+		
+		function setCookie1(cookieName,cookieValue,nDays) {
+		var today = new Date();
+		var expire = new Date();
+		if (nDays==null || nDays==0) nDays=30;
+		expire.setTime(today.getTime() + (30 * 24 * 60 * 60 * 1000));	
+		document.cookie = cookieName+"="+escape(cookieValue)
+						+ ";expires="+expire.toGMTString();
+		}
+		
+		function getCookie1(cookieName) {
+		var theCookie=" "+document.cookie;
+		var ind=theCookie.indexOf(" "+cookieName+"=");
+		if (ind==-1) ind=theCookie.indexOf(";"+cookieName+"=");
+		if (ind==-1 || cookieName=="") return "";
+		var ind1=theCookie.indexOf(";",ind+1);
+		if (ind1==-1) ind1=theCookie.length;
+		return unescape(theCookie.substring(ind+cookieName.length+2,ind1));
+		}
+		
+			$(document).ready(function() {
+				var skipModal = getCookie1('skipModal');
+				if (!skipModal) { // check and see if a cookie exists indicating we should skip the popup
+					$(".popup").fancybox({
+						'overlayShow': true
+					}).trigger('click');
+		
+				setCookie1('skipModal', 'true', 30); // set a cookie indicating we should skip the popup
+			}
+		});
+	</script>
+<% End If%>
 
 <script>
 AOS.init();

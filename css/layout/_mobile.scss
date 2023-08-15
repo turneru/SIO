@@ -469,12 +469,11 @@
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-	.breadcrumbs {
-		border-bottom: 1px solid #B2B2B2;
-	}
 
-	.breadcrumbs > span {
-		border-bottom: none;
+	.button, .btn, button {
+		padding: 13px 30px;
+		white-space: break-spaces;
+		line-height: normal;
 	}
 
 }
